@@ -1,0 +1,89 @@
+runtime: java8
+inbound_services:
+- warmup
+derived_file_type:
+- java_precompiled
+threadsafe: True
+auto_id_policy: default
+api_version: 'none'
+handlers:
+- url: (/.*/)
+  static_files: __static__\1index.html
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: always
+- url: (/)
+  static_files: __static__\1index.html
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: always
+- url: (/.*\.css)
+  static_files: __static__\1
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: always
+- url: (/.*\.jsp)
+  static_files: __static__\1
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: always
+- url: (/.*\.html)
+  static_files: __static__\1
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: always
+- url: /
+  script: unused
+  login: optional
+  secure: always
+- url: /.*/
+  script: unused
+  login: optional
+  secure: always
+- url: /_ah/.*
+  script: unused
+  login: optional
+  secure: always
+- url: /.*\.jsp
+  script: unused
+  login: optional
+  secure: always
+- url: /hello
+  script: unused
+  login: optional
+  secure: always
+- url: /userapi
+  script: unused
+  login: optional
+  secure: always
+- url: .*\.jsp
+  script: unused
+  login: optional
+  secure: optional
+- url: /EventList
+  script: unused
+  login: optional
+  secure: always
+- url: /wypisz
+  script: unused
+  login: optional
+  secure: always
+- url: /dolacz
+  script: unused
+  login: optional
+  secure: always
+- url: /eventdetails
+  script: unused
+  login: optional
+  secure: always
+- url: /create
+  script: unused
+  login: optional
+  secure: always
+
+skip_files: app.yaml
