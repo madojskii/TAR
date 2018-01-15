@@ -55,6 +55,7 @@ public class EventDetails extends HttpServlet {
 		Entity eUser = null;
 		Event event = null;
 		boolean dolaczyl = false;
+		boolean inEvent = false;
 		boolean isAdmin = false;
 		boolean isMember = false;
 		User user = null;
@@ -86,16 +87,19 @@ public class EventDetails extends HttpServlet {
 			if (onEvent != null) {
 				if (onEvent.toString().equalsIgnoreCase(keyEvent.toString())) {
 					dolaczyl = true;
+				}else{
+					inEvent = true;
 				}
 			}
 		}
 		List<String> lista = (ArrayList<String>) e1.getProperty("list");
 		System.out.println(lista);
-
+		
 		req.setAttribute("Event", event);
 		req.setAttribute("Dolaczyl", dolaczyl);
 		req.setAttribute("isAdmin", isAdmin);
 		req.setAttribute("isMember", isMember);
+		req.setAttribute("inEvent", inEvent);
 		req.setAttribute("UserList", lista);
 		req.getRequestDispatcher("/eventdetails.jsp").forward(req, resp);
 	}

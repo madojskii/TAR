@@ -21,7 +21,7 @@
 				<td><c:out value="${Event.name}" /></td>
 				<td align="center"><c:out value="${Event.data}" /></td>
 				<td align="center"><c:out value="${Event.description}" /></td>
-				<c:if test="${isMember == true}">
+				<c:if test="${isMember == true && inEvent == false}">
 					<c:choose>
 						<c:when test="${Dolaczyl == true }">
 							<td align="center"><a href="/wypisz?id=${Event.id}"><button
