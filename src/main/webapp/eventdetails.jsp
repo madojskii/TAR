@@ -36,7 +36,7 @@
 				</c:if>
 			</tr>
 		</table>
-		
+		<c:if test="${isAdmin == true }">
 		<table class="table table-bordered">
 			<h2>Lista uczestników</h2>
 			<tr>
@@ -52,6 +52,7 @@
 				</tr>
 			</c:forEach>
 		</table>
+		</c:if>
 		
 
 	</div>

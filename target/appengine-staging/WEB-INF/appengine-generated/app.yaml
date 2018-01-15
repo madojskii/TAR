@@ -73,6 +73,10 @@ handlers:
   script: unused
   login: optional
   secure: always
+- url: /kick
+  script: unused
+  login: optional
+  secure: always
 - url: /dolacz
   script: unused
   login: optional

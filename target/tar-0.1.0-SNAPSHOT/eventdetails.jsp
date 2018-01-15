@@ -28,7 +28,7 @@
 										class="btn btn-primary btn-sm" type="submit">Wypisz się</button></a></td>
 						</c:when>
 						<c:otherwise>
-							<td align="center"><a href="dolacz?id=${Event.id}">
+							<td align="center"><a href="/dolacz?id=${Event.id}">
 									<button class="btn btn-primary btn-sm" type="submit">Dołącz</button>
 							</a></td>
 						</c:otherwise>
@@ -40,15 +40,20 @@
 		<table class="table table-bordered">
 			<h2>Lista uczestników</h2>
 			<tr>
-				<th width="400"></th>
+				<th width="400">Uczestnik</th>
+				<th width="400">Akcja</th>
 			</tr>
 			<c:forEach var="user" items="${UserList}" varStatus="loop">
 				<tr>
 					<td align="center"><c:out value="${user}" /></td>
+					<td align="center"><a href="/kick?userid=${user}&eventid=${Event.id}">
+									<button class="btn btn-primary btn-sm" type="submit">Wyrzuć</button>
+							</a></td>
 				</tr>
 			</c:forEach>
 		</table>
 		</c:if>
+		
 
 	</div>
 </body>

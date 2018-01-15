@@ -169,78 +169,83 @@
     <async-supported origin="@WebServlet(controller.JoinEvent):23">false</async-supported>
   </servlet>
   <servlet>
+    <servlet-name>kick</servlet-name>
+    <servlet-class origin="@WebServlet(controller.KickController):24">controller.KickController</servlet-class>
+    <async-supported origin="@WebServlet(controller.KickController):25">false</async-supported>
+  </servlet>
+  <servlet>
     <servlet-name>wypisz</servlet-name>
-    <servlet-class origin="@WebServlet(controller.LeaveEvent):24">controller.LeaveEvent</servlet-class>
-    <async-supported origin="@WebServlet(controller.LeaveEvent):25">false</async-supported>
+    <servlet-class origin="@WebServlet(controller.LeaveEvent):26">controller.LeaveEvent</servlet-class>
+    <async-supported origin="@WebServlet(controller.LeaveEvent):27">false</async-supported>
   </servlet>
   <servlet>
     <servlet-name>showEvents</servlet-name>
-    <servlet-class origin="@WebServlet(controller.ViewEvents):26">controller.ViewEvents</servlet-class>
-    <async-supported origin="@WebServlet(controller.ViewEvents):27">false</async-supported>
+    <servlet-class origin="@WebServlet(controller.ViewEvents):28">controller.ViewEvents</servlet-class>
+    <async-supported origin="@WebServlet(controller.ViewEvents):29">false</async-supported>
   </servlet>
   <servlet>
     <servlet-name>UserAPI1</servlet-name>
-    <servlet-class origin="@WebServlet(service.UserServlet):28">service.UserServlet</servlet-class>
-    <async-supported origin="@WebServlet(service.UserServlet):29">false</async-supported>
+    <servlet-class origin="@WebServlet(service.UserServlet):30">service.UserServlet</servlet-class>
+    <async-supported origin="@WebServlet(service.UserServlet):31">false</async-supported>
   </servlet>
   <servlet>
     <servlet-name>HelloAppEngine</servlet-name>
-    <servlet-class origin="@WebServlet(tar.HelloAppEngine):30">tar.HelloAppEngine</servlet-class>
-    <async-supported origin="@WebServlet(tar.HelloAppEngine):31">false</async-supported>
+    <servlet-class origin="@WebServlet(tar.HelloAppEngine):32">tar.HelloAppEngine</servlet-class>
+    <async-supported origin="@WebServlet(tar.HelloAppEngine):33">false</async-supported>
   </servlet>
-  <servlet-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):32">
+  <servlet-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):34">
     <servlet-name>_ah_default</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):33">
+  <servlet-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):35">
     <servlet-name>_ah_sessioncleanup</servlet-name>
     <url-pattern>/_ah/sessioncleanup</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):34">
+  <servlet-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):36">
     <servlet-name>_ah_warmup</servlet-name>
     <url-pattern>/_ah/warmup</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):35">
+  <servlet-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):37">
     <servlet-name>_ah_queue_deferred</servlet-name>
     <url-pattern>/_ah/queue/__deferred__</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):36">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):38">
     <servlet-name>org.apache.jsp.confirm_jsp</servlet-name>
     <url-pattern>/confirm.jsp</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):37">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):39">
     <servlet-name>org.apache.jsp.create_jsp</servlet-name>
     <url-pattern>/create.jsp</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):38">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):40">
     <servlet-name>org.apache.jsp.createJSP_jsp</servlet-name>
     <url-pattern>/createJSP.jsp</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):39">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):41">
     <servlet-name>org.apache.jsp.eventdetails_jsp</servlet-name>
     <url-pattern>/eventdetails.jsp</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):40">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):42">
     <servlet-name>org.apache.jsp.eventList_jsp</servlet-name>
     <url-pattern>/eventList.jsp</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):41">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):43">
     <servlet-name>org.apache.jsp.index_jsp</servlet-name>
     <url-pattern>/index.jsp</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):42">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):44">
     <servlet-name>org.apache.jsp.layout_jsp</servlet-name>
     <url-pattern>/layout.jsp</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):43">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):45">
     <servlet-name>org.apache.jsp.test_jsp</servlet-name>
     <url-pattern>/test.jsp</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):44">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):46">
     <servlet-name>org.apache.jsp.userapi_jsp</servlet-name>
     <url-pattern>/userapi.jsp</url-pattern>
   </servlet-mapping>
-  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):45">
+  <servlet-mapping origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):47">
     <servlet-name>org.apache.jsp.WEB_002dINF.layout_jsp</servlet-name>
     <url-pattern>/WEB-INF/layout.jsp</url-pattern>
   </servlet-mapping>
@@ -255,6 +260,10 @@
   <servlet-mapping>
     <servlet-name>dolacz</servlet-name>
     <url-pattern>/dolacz</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>kick</servlet-name>
+    <url-pattern>/kick</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>wypisz</servlet-name>
@@ -278,7 +287,7 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>Disable TRACE</web-resource-name>
-      <url-pattern origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):46">/</url-pattern>
+      <url-pattern origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):48">/</url-pattern>
       <http-method>TRACE</http-method>
     </web-resource-collection>
     <auth-constraint/>
@@ -286,14 +295,14 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>Enable everything but TRACE</web-resource-name>
-      <url-pattern origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):47">/</url-pattern>
+      <url-pattern origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):49">/</url-pattern>
       <http-method-omission>TRACE</http-method-omission>
     </web-resource-collection>
   </security-constraint>
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>deferred_queue</web-resource-name>
-      <url-pattern origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):48">/_ah/queue/__deferred__</url-pattern>
+      <url-pattern origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):50">/_ah/queue/__deferred__</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>
@@ -302,7 +311,7 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>blog</web-resource-name>
-      <url-pattern origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):49">/*</url-pattern>
+      <url-pattern origin="WebDescriptor(file:///C:/Users/madoy/tar/TAR/target/appengine-staging/WEB-INF/web.xml):51">/*</url-pattern>
     </web-resource-collection>
     <user-data-constraint>
       <transport-guarantee>CONFIDENTIAL</transport-guarantee>
@@ -312,159 +321,159 @@
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <locale-encoding-mapping-list>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):50">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):52">
       <locale>de</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):51">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):53">
       <locale>no</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):52">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):54">
       <locale>be</locale>
       <encoding>ISO-8859-5</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):53">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):55">
       <locale>fi</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):54">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):56">
       <locale>ru</locale>
       <encoding>ISO-8859-5</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):55">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):57">
       <locale>pt</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):56">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):58">
       <locale>bg</locale>
       <encoding>ISO-8859-5</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):57">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):59">
       <locale>lt</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):58">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):60">
       <locale>hr</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):59">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):61">
       <locale>lv</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):60">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):62">
       <locale>fr</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):61">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):63">
       <locale>hu</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):62">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):64">
       <locale>zh_TW</locale>
       <encoding>Big5</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):63">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):65">
       <locale>sh</locale>
       <encoding>ISO-8859-5</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):64">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):66">
       <locale>uk</locale>
       <encoding>ISO-8859-5</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):65">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):67">
       <locale>sk</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):66">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):68">
       <locale>sl</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):67">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):69">
       <locale>ca</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):68">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):70">
       <locale>mk</locale>
       <encoding>ISO-8859-5</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):69">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):71">
       <locale>sq</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):70">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):72">
       <locale>sr</locale>
       <encoding>ISO-8859-5</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):71">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):73">
       <locale>sv</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):72">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):74">
       <locale>ko</locale>
       <encoding>EUC-KR</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):73">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):75">
       <locale>el</locale>
       <encoding>ISO-8859-7</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):74">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):76">
       <locale>en</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):75">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):77">
       <locale>is</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):76">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):78">
       <locale>it</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):77">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):79">
       <locale>es</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):78">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):80">
       <locale>iw</locale>
       <encoding>ISO-8859-8</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):79">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):81">
       <locale>zh</locale>
       <encoding>GB2312</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):80">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):82">
       <locale>et</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):81">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):83">
       <locale>cs</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):82">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):84">
       <locale>ar</locale>
       <encoding>ISO-8859-6</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):83">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):85">
       <locale>ja</locale>
       <encoding>Shift_JIS</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):84">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):86">
       <locale>pl</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):85">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):87">
       <locale>da</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):86">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):88">
       <locale>ro</locale>
       <encoding>ISO-8859-2</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):87">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):89">
       <locale>nl</locale>
       <encoding>ISO-8859-1</encoding>
     </locale-encoding-mapping>
-    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):88">
+    <locale-encoding-mapping origin="DefaultsDescriptor(file:///C:/Users/madoy/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/docs/webdefault.xml):90">
       <locale>tr</locale>
       <encoding>ISO-8859-9</encoding>
     </locale-encoding-mapping>
