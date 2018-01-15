@@ -22,7 +22,14 @@
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 	crossorigin="anonymous"></script>
 </head>
+<%@ page import="com.google.appengine.api.users.User" %>
+<%@ page import="com.google.appengine.api.users.UserService" %>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
 <body>
+
+<% UserService userService = UserServiceFactory.getUserService();
+ User user = userService.getCurrentUser();
+ %>
 	<div class="container">
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
@@ -53,11 +60,11 @@
 										<span class="caret"></span>
 								</a>
 									<ul class="dropdown-menu">
-										<li><a href="/userapi">Wyloguj</a></li>
+										<li><a href="<%= userService.createLogoutURL(request.getRequestURI()) %>">Wyloguj</a></li>
 									</ul></li>
 							</c:when>
 							<c:otherwise>
-								<li><a href="/userapi">Logowanie</a></li>
+								<li><a href="<%= userService.createLoginURL(request.getRequestURI()) %>">Logowanie</a></li>
 							</c:otherwise>
 						</c:choose>
 					</ul>
