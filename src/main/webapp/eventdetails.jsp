@@ -25,7 +25,8 @@
 					<c:choose>
 						<c:when test="${Dolaczyl == true }">
 							<td align="center"><a href="/wypisz?id=${Event.id}"><button
-										class="btn btn-primary btn-sm" type="submit">Wypisz się</button></a></td>
+										class="btn btn-primary btn-sm" type="submit">Wypisz
+										się</button></a></td>
 						</c:when>
 						<c:otherwise>
 							<td align="center"><a href="/dolacz?id=${Event.id}">
@@ -37,23 +38,26 @@
 			</tr>
 		</table>
 		<c:if test="${isAdmin == true }">
-		<table class="table table-bordered">
-			<h2>Lista uczestników</h2>
-			<tr>
-				<th width="400">Uczestnik</th>
-				<th width="400">Akcja</th>
-			</tr>
-			<c:forEach var="user" items="${UserList}" varStatus="loop">
+			<table class="table table-bordered">
+				<h2>Lista uczestników</h2>
 				<tr>
-					<td align="center"><c:out value="${user}" /></td>
-					<td align="center"><a href="/kick?userid=${user}&eventid=${Event.id}">
+					<th width="400">Uczestnik</th>
+					<th width="400">Akcja</th>
+				</tr>
+				<c:forEach var="user" items="${UserList}" varStatus="loop">
+					<c:if test="${user ne ''}">
+						<tr>
+							<td align="center"><c:out value="${user}" /></td>
+							<td align="center"><a
+								href="/kick?userid=${user}&eventid=${Event.id}">
 									<button class="btn btn-primary btn-sm" type="submit">Wyrzuć</button>
 							</a></td>
-				</tr>
-			</c:forEach>
-		</table>
+						</tr>
+					</c:if>
+				</c:forEach>
+			</table>
 		</c:if>
-		
+
 
 	</div>
 </body>
