@@ -1,6 +1,6 @@
 cron:
 - description: 'daily summary job'
   url: /mail
-  schedule: every day 00:13
+  schedule: every day 01:34
   timezone: UTC
   target: beta
