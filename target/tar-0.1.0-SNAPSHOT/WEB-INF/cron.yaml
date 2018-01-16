@@ -1,3 +1,4 @@
 cron:
- url: /mail
- schedule: every monday 23:59
+- description: "monday morning mailout"
+  url: /mail
+  schedule: every day 02:07

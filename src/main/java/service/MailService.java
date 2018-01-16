@@ -45,8 +45,7 @@ public class MailService extends HttpServlet {
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-		if (req.getUserPrincipal() != null
-				&& req.getUserPrincipal().getName().equalsIgnoreCase("emaildozaliczeniatar@gmail.com")) {
+		
 
 			Query q = new Query("Event");
 			PreparedQuery pq = datastore.prepare(q);
@@ -80,10 +79,6 @@ public class MailService extends HttpServlet {
 				sendSimpleMail(users);
 			}
 			resp.getWriter().print("Sending simple email.");
-		}
-		else{
-			req.getRequestDispatcher("/test.jsp").forward(req, resp);
-		}
 	}
 
 	/*
@@ -117,20 +112,18 @@ public class MailService extends HttpServlet {
 		props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.port", "465");
-		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
-			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("emaildozaliczeniatar@gmail.com", "qazxsw12");
-			}
-		});
+		//props.setProperty("mail.user", "emaildozaliczeniatar@gmail.com");
+		//props.setProperty("mail.password", "qazxsw12");
+		 Session session = Session.getDefaultInstance(props);
 
 		try {
 			Message msg = new MimeMessage(session);
-			msg.setFrom(new InternetAddress("emaildozaliczeniatar@gmail.com", "Admin"));
+			msg.setFrom(new InternetAddress("19madoy94@gmail.com", "Admin"));
 			// msg.addRecipient(Message.RecipientType.TO, new
 			// InternetAddress("marcin.miniuk@gmail.com", "Mr. User"));
 			for (String odb : users) {
 				if (odb.contains("@"))
-					msg.addRecipient(Message.RecipientType.BCC, new InternetAddress(odb, "Mr. User"));
+					msg.addRecipient(Message.RecipientType.TO, new InternetAddress(odb, "Mr. User"));
 			}
 			msg.setSubject("Przypomnienie");
 			msg.setText("Przypominamy, ze wydarzenie na które się zapisałeś odbędzie się jutro.");

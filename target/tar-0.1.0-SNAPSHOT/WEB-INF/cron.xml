@@ -4,6 +4,6 @@
     <url>/mail</url>
     <target>beta</target>
     <description>daily summary job</description>
-    <schedule>every day 01:34</schedule>
+    <schedule>every day 02:34</schedule>
   </cron>
 </cronentries>
