@@ -10,7 +10,7 @@
 <body>
 	<div class="container" align="center">
 		<table class="table table-bordered">
-			<h2>Nie masz uprawnień do tworzenia wydarzeń :/.</h2>
+			<h2>Nie masz wystarczających uprawnień :/.</h2>
 		</table>
 	</div>
 </body>

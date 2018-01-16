@@ -2,6 +2,7 @@ package tar;
 
 import java.io.IOException;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,12 +16,8 @@ public class HelloAppEngine extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) 
-      throws IOException {
+      throws IOException, ServletException {
       
-    response.setContentType("text/plain");
-    response.setCharacterEncoding("UTF-8");
-
-    response.getWriter().print("Hello App Engine!\r\n");
-
+	  request.getRequestDispatcher("/test.jsp").forward(request, response);
   }
 }

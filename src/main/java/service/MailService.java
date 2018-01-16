@@ -43,93 +43,85 @@ public class MailService extends HttpServlet {
 	DatastoreService datastore;
 
 	@Override
-	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-		Query q = new Query("Event");
-		PreparedQuery pq = datastore.prepare(q);
-		List<Event> lista = new ArrayList();
-		for (Entity e : pq.asIterable()) {
-			// System.out.println(e.getKey().getId());
-			Event event = new Event(e.getKey().getId(), e.getProperty("name").toString(),
-					e.getProperty("data").toString(), e.getProperty("description").toString());
-			event.setUsers((ArrayList<String>) e.getProperty("list"));
-			lista.add(event);
-		}
-		Calendar cal = Calendar.getInstance();
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		cal.add(Calendar.DATE, +1);
-		List<String> users = new ArrayList<String>();
-		for (Event e : lista) {
-			String string = e.getData();
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
-			LocalDate date = LocalDate.parse(string, formatter);
-			System.out.println(date);
-			if (date.toString().equalsIgnoreCase(dateFormat.format(cal.getTime()).toString())) {
-				System.out.println("tak");
-				if (e.getUsers() != null && e.getUsers().size() > 1) {
-					users.addAll(e.getUsers());
-					System.out.println(e.getUsers().toString() + " +");
+		if (req.getUserPrincipal() != null
+				&& req.getUserPrincipal().getName().equalsIgnoreCase("emaildozaliczeniatar@gmail.com")) {
+
+			Query q = new Query("Event");
+			PreparedQuery pq = datastore.prepare(q);
+			List<Event> lista = new ArrayList();
+			for (Entity e : pq.asIterable()) {
+				// System.out.println(e.getKey().getId());
+				Event event = new Event(e.getKey().getId(), e.getProperty("name").toString(),
+						e.getProperty("data").toString(), e.getProperty("description").toString());
+				event.setUsers((ArrayList<String>) e.getProperty("list"));
+				lista.add(event);
+			}
+			Calendar cal = Calendar.getInstance();
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+			cal.add(Calendar.DATE, +1);
+			List<String> users = new ArrayList<String>();
+			for (Event e : lista) {
+				String string = e.getData();
+				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
+				LocalDate date = LocalDate.parse(string, formatter);
+				System.out.println(date);
+				if (date.toString().equalsIgnoreCase(dateFormat.format(cal.getTime()).toString())) {
+					System.out.println("tak");
+					if (e.getUsers() != null && e.getUsers().size() > 1) {
+						users.addAll(e.getUsers());
+						System.out.println(e.getUsers().toString() + " +");
+					}
 				}
 			}
-		}
-		if (users.size() != 0) {
-			System.out.println("tutaj");
-			sendSimpleMail(users);
-		}
-		resp.getWriter().print("Sending simple email.");
-	}
-	
-/*	@Override
-	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
-		Query q = new Query("Event");
-		PreparedQuery pq = datastore.prepare(q);
-		List<Event> lista = new ArrayList();
-		for (Entity e : pq.asIterable()) {
-			// System.out.println(e.getKey().getId());
-			Event event = new Event(e.getKey().getId(), e.getProperty("name").toString(),
-					e.getProperty("data").toString(), e.getProperty("description").toString());
-			event.setUsers((ArrayList<String>) e.getProperty("list"));
-			lista.add(event);
-		}
-		Calendar cal = Calendar.getInstance();
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		cal.add(Calendar.DATE, +1);
-		List<String> users = new ArrayList<String>();
-		for (Event e : lista) {
-			String string = e.getData();
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
-			LocalDate date = LocalDate.parse(string, formatter);
-			System.out.println(date);
-			if (date.toString().equalsIgnoreCase(dateFormat.format(cal.getTime()).toString())) {
-				System.out.println("tak");
-				if (e.getUsers() != null && e.getUsers().size() > 1) {
-					users.addAll(e.getUsers());
-					System.out.println(e.getUsers().toString() + " +");
-				}
+			if (users.size() != 0) {
+				System.out.println("tutaj");
+				sendSimpleMail(users);
 			}
+			resp.getWriter().print("Sending simple email.");
 		}
-		if (users.size() != 0) {
-			System.out.println("tutaj");
-			sendSimpleMail(users);
+		else{
+			req.getRequestDispatcher("/test.jsp").forward(req, resp);
 		}
-		resp.getWriter().print("Sending simple email.");
 	}
-*/
+
+	/*
+	 * @Override public void doPost(HttpServletRequest req, HttpServletResponse
+	 * resp) throws IOException {
+	 * 
+	 * Query q = new Query("Event"); PreparedQuery pq = datastore.prepare(q);
+	 * List<Event> lista = new ArrayList(); for (Entity e : pq.asIterable()) {
+	 * // System.out.println(e.getKey().getId()); Event event = new
+	 * Event(e.getKey().getId(), e.getProperty("name").toString(),
+	 * e.getProperty("data").toString(),
+	 * e.getProperty("description").toString());
+	 * event.setUsers((ArrayList<String>) e.getProperty("list"));
+	 * lista.add(event); } Calendar cal = Calendar.getInstance(); DateFormat
+	 * dateFormat = new SimpleDateFormat("yyyy-MM-dd"); cal.add(Calendar.DATE,
+	 * +1); List<String> users = new ArrayList<String>(); for (Event e : lista)
+	 * { String string = e.getData(); DateTimeFormatter formatter =
+	 * DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH); LocalDate date
+	 * = LocalDate.parse(string, formatter); System.out.println(date); if
+	 * (date.toString().equalsIgnoreCase(dateFormat.format(cal.getTime()).
+	 * toString())) { System.out.println("tak"); if (e.getUsers() != null &&
+	 * e.getUsers().size() > 1) { users.addAll(e.getUsers());
+	 * System.out.println(e.getUsers().toString() + " +"); } } } if
+	 * (users.size() != 0) { System.out.println("tutaj"); sendSimpleMail(users);
+	 * } resp.getWriter().print("Sending simple email."); }
+	 */
 	private void sendSimpleMail(List<String> users) {
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "smtp.gmail.com");
 		props.put("mail.smtp.socketFactory.port", "465");
-		props.put("mail.smtp.socketFactory.class",
-				"javax.net.ssl.SSLSocketFactory");
+		props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.port", "465");
-		Session session = Session.getDefaultInstance(props,
-				new javax.mail.Authenticator() {
-					protected PasswordAuthentication getPasswordAuthentication() {
-						return new PasswordAuthentication("emaildozaliczeniatar@gmail.com","qazxsw12");
-					}
-				});
+		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication("emaildozaliczeniatar@gmail.com", "qazxsw12");
+			}
+		});
 
 		try {
 			Message msg = new MimeMessage(session);
