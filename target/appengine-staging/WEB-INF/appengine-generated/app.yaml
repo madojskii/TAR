@@ -65,6 +65,10 @@ handlers:
   script: unused
   login: optional
   secure: optional
+- url: /mail
+  script: unused
+  login: optional
+  secure: always
 - url: /EventList
   script: unused
   login: optional

@@ -1,0 +1,6 @@
+cron:
+- description: 'daily summary job'
+  url: /mail
+  schedule: every day 00:13
+  timezone: UTC
+  target: beta

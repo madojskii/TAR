@@ -42,7 +42,7 @@ public class ViewEvents extends HttpServlet {
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		//Entity e1 = datastore.get(key);
-		System.out.println("Dziala?: ");
+		//System.out.println("Dziala?: ");
 		Query q = new Query("Event");
 		PreparedQuery pq = datastore.prepare(q);
 		List<Event> lista = new ArrayList();

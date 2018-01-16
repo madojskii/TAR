@@ -1,0 +1,3 @@
+cron:
+ url: /mail
+ schedule: every monday 23:59

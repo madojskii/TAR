@@ -1,12 +1,13 @@
 C:\Users\madoy\tar\TAR\src\main\java\controller\KickController.java
 C:\Users\madoy\tar\TAR\src\main\java\tar\showBlog.java
-C:\Users\madoy\tar\TAR\src\main\java\controller\CreateEvent.java
-C:\Users\madoy\tar\TAR\src\main\java\controller\JoinEvent.java
 C:\Users\madoy\tar\TAR\src\main\java\controller\ViewEvents.java
 C:\Users\madoy\tar\TAR\src\main\java\controller\EventDetails.java
-C:\Users\madoy\tar\TAR\src\main\java\controller\LeaveEvent.java
 C:\Users\madoy\tar\TAR\src\main\java\tar\HelloAppEngine.java
 C:\Users\madoy\tar\TAR\src\main\java\tar\Book.java
 C:\Users\madoy\tar\TAR\src\main\java\model\User.java
-C:\Users\madoy\tar\TAR\src\main\java\model\Event.java
+C:\Users\madoy\tar\TAR\src\main\java\service\MailService.java
 C:\Users\madoy\tar\TAR\src\main\java\service\UserServlet.java
+C:\Users\madoy\tar\TAR\src\main\java\controller\CreateEvent.java
+C:\Users\madoy\tar\TAR\src\main\java\controller\JoinEvent.java
+C:\Users\madoy\tar\TAR\src\main\java\controller\LeaveEvent.java
+C:\Users\madoy\tar\TAR\src\main\java\model\Event.java
